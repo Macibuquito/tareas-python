@@ -24,50 +24,59 @@
 #         Llama a los métodos getNombre(), getEdad(), comer() y hacerSonido() para cada instancia.
 #         Demuestra cómo puedes tratar a un Perro o un Gato como un Animal (por ejemplo, en una lista de Animales) y llamar a hacerSonido() para observar el comportamiento polimórfico (aunque el polimorfismo se verá más a fondo en el Ejercicio 2, aquí ya se empieza a vislumbrar).
 
-class Animal:
-    def __init__(self, nombre, edad):   #clase base llamada Animal
-        self.__nombre = nombre   #nombre (String)
-        self.__edad = edad   #edad (int)
 
-    def getNombre(self):
+
+
+# ------------------------------------------------------
+# TAREA POO - Ejercicio 1: El Reino Animal
+# Demuestra Abstracción, Encapsulamiento, Herencia y Polimorfismo
+# ------------------------------------------------------
+
+
+class Animal:                           # clase base llamada Animal 
+    def __init__(self, nombre, edad):   # constructor para inicializar atributos nombre y edad
+        self.__nombre = nombre          # atributo nombre (String)
+        self.__edad = edad              # atributo edad (int)
+
+    def getNombre(self):                # Método que devuelve el valor del atributo nombre
         print(f"{self.__nombre}")
 
-    def getEdad(self):
+    def getEdad(self):                  # Método que devuelve el valor del atributo edad
         print(f"{self.__edad}")
 
-    def setNombre(self, nombre):  
+    def setNombre(self, nombre):        # Método que cambia el valor del atributo nombre 
         self.__nombre = nombre
 
-    def setEdad(self, edad):
+    def setEdad(self, edad):            # Método que cambia el valor del atributo edad
         self.__edad = edad
 
-    def hacerSonido(self):
+    def hacerSonido(self):              # Método abstracto para el sonido que hace un animal
         pass
 
-    def comer(self):
+    def comer(self):                    # Método que imprime el mensaje genérico "El animal está comiendo".
         print("El animal esta comiendo")
 
 
 
-class Perro(Animal):
-    def __init__(self, nombre, edad):
-        super().__init__(nombre, edad)
+class Perro(Animal):                    # clase que hereda de la clase base Animal
+    def __init__(self, nombre, edad):   # constructor para inicializar atributos nombre y edad
+        super().__init__(nombre, edad)  # constructor que llama al constructor de la clase base.
 
-    def hacerSonido(self):
+    def hacerSonido(self):              # Método que sobreescribe el método hacerSonido() para que imprima el sonido de un perro
         print("Guau guau!")
 
 
-class Gato(Animal):
-    def __init__(self, nombre, edad):
-        super().__init__(nombre, edad)
+class Gato(Animal):                     # clase que hereda de la clase base Animal
+    def __init__(self, nombre, edad):   # constructor para inicializar atributos nombre y edad
+        super().__init__(nombre, edad)  # constructor que llama al constructor de la clase base.
 
-    def hacerSonido(self):
+    def hacerSonido(self):              # Método que sobreescribe el método hacerSonido() para que imprima el sonido de un gato
         print("Miau miau!")    
 
 
 print()
-perro = Perro("Doggy", 6)
-perro.getNombre()
+perro = Perro("Doggy", 6)               # Instanciar la clase Perro con el objeto perro 
+perro.getNombre()                       # Se utilizan los diferentes métodos de la clase Perro y de la clase base Animal 
 perro.setNombre("Scooby")
 perro.getNombre()
 perro.getEdad()
@@ -75,8 +84,8 @@ perro.comer()
 perro.hacerSonido()
 
 print()
-gato = Gato("Pichina", 2)
-gato.getNombre()
+gato = Gato("Pichina", 2)               # Instanciar la clase Gato con el objeto gato
+gato.getNombre()                        # Se utilizan los diferentes métodos de la clase Gato y de la clase base Animal 
 perro.setNombre("Peluchito")
 perro.getNombre()
 gato.getEdad()
@@ -84,7 +93,7 @@ gato.comer()
 gato.hacerSonido()
 
 print()
-print("Polimorfismo")
+print("Polimorfismo")                   # Se aplica polimorfismo para cada clase Perro y Gato
 animales = [Perro("Doggy", 6), Gato("Pichina", 2)]
 for animal in animales:
     animal.hacerSonido()

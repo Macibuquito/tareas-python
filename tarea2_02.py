@@ -28,14 +28,15 @@
 #         Observa cómo, a pesar de que todas las llamadas se hacen a través de una referencia de tipo Forma, el método correcto (específico de Circulo o Rectangulo) es invocado. Esto es el Polimorfismo en acción.
 #         Imprime los resultados de área y perímetro para cada forma.
 
+
 import math
 
 class Forma:
     def __init__(self, nombre):
         self.__nombre = nombre
-    def calcularArea():
+    def calcularArea(self):
         pass
-    def calcularPerimetro():
+    def calcularPerimetro(self):
         pass
 
 class Circulo(Forma):
@@ -43,9 +44,9 @@ class Circulo(Forma):
         super().__init__(nombre)
         self.radio = radio
     def calcularArea(self):
-        return pi*self.radio**2
+        return math.pi * self.radio ** 2
     def calcularPerimetro(self):
-        return 2*pi*self.radio
+        return 2 * math.pi * self.radio
 
 class Rectangulo(Forma):
     def __init__(self, nombre, ancho, alto):
@@ -58,20 +59,11 @@ class Rectangulo(Forma):
     def calcularPerimetro(self):
         return 2 * (self.ancho + self.alto)
 
-
-#     Clase de Prueba (Main o similar):
-#         Crea una lista (o array) de objetos de tipo Forma.
-#         Añade instancias de Circulo y Rectangulo a esta lista.
-#         Itera sobre la lista y, para cada Forma, llama a calcularArea() y calcularPerimetro().
-#         Observa cómo, a pesar de que todas las llamadas se hacen a través de una referencia de tipo Forma, el método correcto (específico de Circulo o Rectangulo) es invocado. Esto es el Polimorfismo en acción.
-#         Imprime los resultados de área y perímetro para cada forma.
-
-
 formas = [Circulo("C1", 5), Rectangulo("R1",5, 5)]
 
 for forma in formas:
-    forma.calcularArea()
-    forma.calcularPerimetro()
+    print(forma.calcularArea())
+    print(forma.calcularPerimetro())
 
 
 
