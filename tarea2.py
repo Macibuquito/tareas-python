@@ -31,12 +31,16 @@ class Animal:
 
     def getNombre(self):
         print(f"{self.__nombre}")
+
     def getEdad(self):
         print(f"{self.__edad}")
-    def setNombre(self):   
-        pass
-    def setEdad(self):
-        pass
+
+    def setNombre(self, nombre):  
+        self.__nombre = nombre
+
+    def setEdad(self, edad):
+        self.__edad = edad
+
     def hacerSonido(self):
         pass
 
@@ -46,22 +50,25 @@ class Animal:
 
 
 class Perro(Animal):
+    def __init__(self, nombre, edad):
+        super().__init__(nombre, edad)
+
     def hacerSonido(self):
         print("Guau guau!")
 
 
 class Gato(Animal):
+    def __init__(self, nombre, edad):
+        super().__init__(nombre, edad)
+
     def hacerSonido(self):
         print("Miau miau!")    
-
-#         Demuestra cómo puedes tratar a un Perro o un Gato como
-#  un Animal (por ejemplo, en una lista de Animales) y llamar a hacerSonido() para
-#  observar el comportamiento polimórfico (aunque el polimorfismo se verá más a fondo 
-# en el Ejercicio 2, aquí ya se empieza a vislumbrar).
 
 
 print()
 perro = Perro("Doggy", 6)
+perro.getNombre()
+perro.setNombre("Scooby")
 perro.getNombre()
 perro.getEdad()
 perro.comer()
@@ -70,6 +77,8 @@ perro.hacerSonido()
 print()
 gato = Gato("Pichina", 2)
 gato.getNombre()
+perro.setNombre("Peluchito")
+perro.getNombre()
 gato.getEdad()
 gato.comer()
 gato.hacerSonido()
