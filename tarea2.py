@@ -30,10 +30,10 @@ class Animal:
         self.__edad = edad   #edad (int)
 
     def getNombre(self):
-        pass
+        print(f"{self.__nombre}")
     def getEdad(self):
-        pass
-    def setNombre(self):
+        print(f"{self.__edad}")
+    def setNombre(self):   
         pass
     def setEdad(self):
         pass
@@ -60,18 +60,25 @@ class Gato(Animal):
 # en el Ejercicio 2, aquí ya se empieza a vislumbrar).
 
 
-perro = Perro()
-perro.getNombre
-perro.getEdad
-perro.comer
-perro.hacerSonido
+print()
+perro = Perro("Doggy", 6)
+perro.getNombre()
+perro.getEdad()
+perro.comer()
+perro.hacerSonido()
 
-gato = Gato()
-gato.getNombre
-gato.getEdad
-gato.comer
-gato.hacerSonido
+print()
+gato = Gato("Pichina", 2)
+gato.getNombre()
+gato.getEdad()
+gato.comer()
+gato.hacerSonido()
 
-animales = [Perro(), Gato()]
+print()
+print("Polimorfismo")
+animales = [Perro("Doggy", 6), Gato("Pichina", 2)]
 for animal in animales:
-    print(animal.hacerSonido)
+    animal.hacerSonido()
+
+
+
