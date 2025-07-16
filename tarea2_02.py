@@ -31,15 +31,15 @@
 
 import math
 
-class Forma:
+class Forma:                              # Clase abstracta llamada Forma
     def __init__(self, nombre):
-        self.__nombre = nombre
-    def calcularArea(self):
+        self.__nombre = nombre            # Atributo nombre para la forma y su encapsulamiento
+    def calcularArea(self):               # Método abstracto calcularArea()
         pass
-    def calcularPerimetro(self):
+    def calcularPerimetro(self):          # Método abstracto calcularPerimetro()
         pass
 
-class Circulo(Forma):
+class Circulo(Forma):                     # Clase Circulo que hereda de la clase Forma.
     def __init__(self, nombre, radio):
         super().__init__(nombre)
         self.radio = radio
@@ -48,7 +48,7 @@ class Circulo(Forma):
     def calcularPerimetro(self):
         return 2 * math.pi * self.radio
 
-class Rectangulo(Forma):
+class Rectangulo(Forma):                  # Clase Rectangulo que hereda de la clase Forma.
     def __init__(self, nombre, ancho, alto):
         super().__init__(nombre)
         self.ancho = ancho
