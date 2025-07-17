@@ -29,6 +29,12 @@
 #         Imprime los resultados de área y perímetro para cada forma.
 
 
+# ------------------------------------------------------
+# TAREA POO - Ejercicio 2: Áreas y perimetros
+# Demuestra Abstracción, Encapsulamiento, Herencia y Polimorfismo
+# ------------------------------------------------------
+
+
 import math
 
 class Forma:                              # Clase abstracta llamada Forma
