@@ -30,6 +30,11 @@
 
 
 # ------------------------------------------------------
+# Alumno: Carlos Eduardo Vargas Fernandez
+# Correo: carlosevargasfernadez@gmail.com
+# Curso: Python POO
+# Nacionalidad: Peruano
+
 # TAREA POO - Ejercicio 2: Áreas y perimetros
 # Demuestra Abstracción, Encapsulamiento, Herencia y Polimorfismo
 # ------------------------------------------------------

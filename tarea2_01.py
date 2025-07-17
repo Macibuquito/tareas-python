@@ -28,6 +28,11 @@
 
 
 # ------------------------------------------------------
+# Alumno: Carlos Eduardo Vargas Fernandez
+# Correo: carlosevargasfernadez@gmail.com
+# Curso: Python POO
+# Nacionalidad: Peruano
+
 # TAREA POO - Ejercicio 1: El Reino Animal
 # Demuestra Abstracción, Encapsulamiento, Herencia y Polimorfismo
 # ------------------------------------------------------
