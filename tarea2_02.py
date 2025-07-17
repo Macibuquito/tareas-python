@@ -40,28 +40,28 @@ class Forma:                              # Clase abstracta llamada Forma
         pass
 
 class Circulo(Forma):                     # Clase Circulo que hereda de la clase Forma.
-    def __init__(self, nombre, radio):
-        super().__init__(nombre)
-        self.radio = radio
-    def calcularArea(self):
+    def __init__(self, nombre, radio):    # Constructor para inicializar los atributos de la clase Circulo
+        super().__init__(nombre)          # Constructor que llama al constructor de la clase base.
+        self.radio = radio                # Atributo radio de la clase Circulo
+    def calcularArea(self):               # Método para calcular el área de Circulo
         return math.pi * self.radio ** 2
-    def calcularPerimetro(self):
+    def calcularPerimetro(self):          # Método para calcular el perímetro de Circulo
         return 2 * math.pi * self.radio
 
-class Rectangulo(Forma):                  # Clase Rectangulo que hereda de la clase Forma.
-    def __init__(self, nombre, ancho, alto):
-        super().__init__(nombre)
-        self.ancho = ancho
-        self.alto = alto
+class Rectangulo(Forma):                        # Clase Rectangulo que hereda de la clase Forma.
+    def __init__(self, nombre, ancho, alto):    # Constructor para inicializar los atributos de la clase Rectangulo
+        super().__init__(nombre)                # Constructor que llama al constructor de la clase base.
+        self.ancho = ancho                      # Atributo ancho de la clase Rectangulo
+        self.alto = alto                        # Atributo alto de la clase Rectangulo
 
-    def calcularArea(self):
+    def calcularArea(self):               # Método para calcular el área de Rectangulo
         return self.ancho * self.alto
-    def calcularPerimetro(self):
+    def calcularPerimetro(self):          # Método para calcular el perímetro de Rectangulo
         return 2 * (self.ancho + self.alto)
 
-formas = [Circulo("C1", 5), Rectangulo("R1",5, 5)]
+formas = [Circulo("C1", 5), Rectangulo("R1",5, 5)]    # lista con las clases Circulo y Rectangulo con sus respectivos atributos
 
-for forma in formas:
+for forma in formas:                      # Bucle para calcular las areas y perimetros de Circulo y Rectangulo
     print(forma.calcularArea())
     print(forma.calcularPerimetro())
 
