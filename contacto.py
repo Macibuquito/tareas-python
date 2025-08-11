@@ -10,7 +10,7 @@ class Contacto:
         """
 
         def __init__(self, nombre, telefono, email = "", direccion = ""):
-            """"" Inicializa un nuevo contacto."""""
+            """ Inicializa un nuevo contacto."""
             self.nombre = nombre
             self.telefono = telefono
             self.email = email
